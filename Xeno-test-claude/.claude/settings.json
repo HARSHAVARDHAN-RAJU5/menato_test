@@ -1,0 +1,57 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "_managed_by": "memanto",
+            "type": "command",
+            "command": "E:/Project/memanto-test/Xeno-test-claude/.venv/Scripts/python.exe",
+            "args": [
+              "E:/Project/memanto-test/Xeno-test-claude/.venv/lib/site-packages/memanto/cli/connect/assets/hooks/session_start.py"
+            ],
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "_managed_by": "memanto",
+            "type": "command",
+            "command": "E:/Project/memanto-test/Xeno-test-claude/.venv/Scripts/python.exe",
+            "args": [
+              "-m",
+              "memanto",
+              "memory",
+              "sync",
+              "--project-dir",
+              "E:/Project/memanto-test/Xeno-test-claude"
+            ],
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "_managed_by": "memanto",
+            "type": "command",
+            "if": "Bash(memanto *)",
+            "command": "E:/Project/memanto-test/Xeno-test-claude/.venv/Scripts/python.exe",
+            "args": [
+              "E:/Project/memanto-test/Xeno-test-claude/.venv/lib/site-packages/memanto/cli/connect/assets/hooks/notify.py"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

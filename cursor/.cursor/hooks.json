@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "sessionStart": [
+      {
+        "_managed_by": "memanto",
+        "command": "\"C:/Users/ADMIN/AppData/Local/Programs/Python/Python310/python.exe\" \"C:/Users/ADMIN/AppData/Local/Programs/Python/Python310/lib/site-packages/memanto/cli/connect/assets/hooks/session_start.py\" --host cursor"
+      }
+    ],
+    "preCompact": [
+      {
+        "_managed_by": "memanto",
+        "command": "\"C:/Users/ADMIN/AppData/Local/Programs/Python/Python310/python.exe\" \"C:/Users/ADMIN/AppData/Local/Programs/Python/Python310/lib/site-packages/memanto/cli/connect/assets/hooks/session_start.py\" --host cursor"
+      }
+    ]
+  }
+}
